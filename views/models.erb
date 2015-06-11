@@ -2,8 +2,16 @@
 <ul>
 <% @models.each do |model| %>
 	<li>
-		<%= model.name %>
+		<%= model.name %>: <%= model.pwd %> with email <%= model.email %>
 	</li>
+<% end %>
+	<li>
+		BREAK
+	</li>
+<% @time_sheets.each do |time_sheet| %>
+	<li>
+		<%= time_sheet.user %>, <%= time_sheet.email %>, <%= time_sheet.ay %>
+	</li> 
 <% end %>
 </ul>
 <a href="/">Back to Home</a>
